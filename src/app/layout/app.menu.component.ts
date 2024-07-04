@@ -19,6 +19,56 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
+            },           
+            {
+                label: 'Cadastros',
+                items:[
+                    {
+                        label: 'Produtos', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Grupo de Produtos', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark' },
+                                ]
+                            },
+                            {
+                                label: 'Subgrupo de Produtos', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'buscar', icon: 'pi pi-fw pi-bookmark' },
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        label: 'Pessoas', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Usuários', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark' },
+                                ]
+                            },
+                            {
+                                label: 'Administradores', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'buscar', icon: 'pi pi-fw pi-bookmark' },
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                label: 'Estoque',
+                items: [
+                    { label: 'Entrada de Produto', icon: 'pi pi-fw pi-home' },
+                    { label: 'Ajustes de Estoque', icon: 'pi pi-fw pi-home' }
+                ]
             },
             {
                 label: 'UI Components',

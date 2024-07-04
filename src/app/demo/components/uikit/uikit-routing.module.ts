@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { authGuard } from '../../adonisServices/auth.guard';
 
 @NgModule({
     imports: [RouterModule.forChild([
@@ -19,7 +20,7 @@ import { RouterModule } from '@angular/router';
         { path: 'table', data: { breadcrumb: 'Table' }, loadChildren: () => import('./table/tabledemo.module').then(m => m.TableDemoModule) },
         { path: 'tree', data: { breadcrumb: 'Tree' }, loadChildren: () => import('./tree/treedemo.module').then(m => m.TreeDemoModule) },
         { path: 'menu', data: { breadcrumb: 'Menu' }, loadChildren: () => import('./menus/menus.module').then(m => m.MenusModule) },
-        { path: 'cadastro', data: { breadcrumb: 'cadastro' }, loadChildren: () => import('./caduser/cad-user.module').then(m => m.CadUserModule) },
+        { path: 'cadastro', data: { breadcrumb: 'cadastro' }, loadChildren: () => import('./caduser/cad-user.module').then(m => m.CadUserModule), canActivate: [authGuard]  },
         { path: '**', redirectTo: '/notfound' }
     ])],
     exports: [RouterModule]

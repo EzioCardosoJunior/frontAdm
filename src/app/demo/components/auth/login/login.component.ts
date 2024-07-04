@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { AuthService } from 'src/app/demo/adonisServices/auth.service';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+
 
 @Component({
     selector: 'app-login',
@@ -15,9 +19,33 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 })
 export class LoginComponent {
 
+    email: string;
+    password: string;
+
     valCheck: string[] = ['remember'];
+    loginForm: FormGroup;
 
-    password!: string;
+    constructor(public layoutService: LayoutService, private authService: AuthService, private router: Router, private fb: FormBuilder) {
+        this.loginForm = this.fb.group({
+            email: ['', [Validators.required, Validators.email]],
+            password: ['', [Validators.required, Validators.minLength(6)]],
+          });
+     }
 
-    constructor(public layoutService: LayoutService) { }
+    onLogin() {
+        const loginData = this.loginForm.value;
+        console.log(loginData)
+        this.authService.login(loginData.email, loginData.password).subscribe(
+          res => {
+            console.log(res)
+            this.router.navigate(['/']);
+          },
+          err => {
+            console.log(err)
+            alert('Invalid email/password');
+          }
+        );
+      }
+
+
 }
