@@ -1,6 +1,7 @@
-import { CadUserComponent } from './cad-user.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CadUserComponent } from './cad-user.component';
+
 @NgModule({
     imports: [RouterModule.forChild([
         { path: '', component: CadUserComponent }
@@ -8,3 +9,4 @@ import { RouterModule } from '@angular/router';
     exports: [RouterModule]
 })
 export class CadUserRoutingModule { }
+
