@@ -1,1 +1,25 @@
-<p>cad-user works!</p>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+        <h5>Inline</h5>
+        <div class="formgroup-inline">
+
+            <div class="field">
+                <label htmlFor="username" class="p-sr-only">Username:</label>
+                <input pInputText type="text" id="username" placeholder="username" formControlName="username">
+            </div>
+            <div class="field">
+                <label htmlFor="email" class="p-sr-only">Email:</label>
+                <input pInputText type="email" id="email" placeholder="email" formControlName="email">
+            </div>
+            <div class="field">
+                <label htmlFor="password" class="p-sr-only">Password:</label>
+                <input pInputText type="password" id="password" placeholder="password" formControlName="password">
+            </div>
+            <div class="field">
+                <label htmlFor="confirmPassword" class="p-sr-only">Confirm Password:</label>
+                <input pInputText type="password" id="confirmPassword" placeholder="confirmPassword" formControlName="confirmPassword">
+            </div>
+            <button pButton type="submit" [disabled]="userForm.invalid">Submit</button>
+        </div>
+    </div>
+</form>
