@@ -1,0 +1,14 @@
+<form [formGroup]="catForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+        <h5>Inline</h5>
+        <div class="formgroup-inline">
+            <div class="formgroup-inline">
+                <div class="field">
+                    <label htmlFor="name" class="p-sr-only">Nome:</label>
+                    <input pInputText type="text" id="name" placeholder="name" formControlName="name">
+                </div>
+            </div>
+            <button pButton type="submit" [disabled]="catForm.invalid">Submit</button>
+        </div>
+    </div>
+</form>

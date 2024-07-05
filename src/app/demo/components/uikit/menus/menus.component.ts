@@ -27,6 +27,8 @@ export class MenusComponent implements OnInit {
 
     slideItems: MenuItem[] = [];
 
+    menuHeaderItems: MenuItem[] = [];
+
     menuItems: MenuItem[] = [];
 
     plainMenuItems: MenuItem[] = [];
@@ -163,6 +165,24 @@ export class MenusComponent implements OnInit {
                     }
                 ]
             }
+        ];
+
+        this.menuHeaderItems = [
+            {
+                label: 'Save', icon: 'pi pi-fw pi-check'
+            },
+            {
+                label: 'Update', icon: 'pi pi-fw pi-refresh'
+            },
+            {
+                label: 'Delete', icon: 'pi pi-fw pi-trash'
+            },
+            {
+                separator: true
+            },
+            {
+                label: 'Logout', icon: 'pi pi-fw pi-sign-out'
+            },
         ];
 
         this.menuItems = [
