@@ -11,7 +11,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MultiSelectModule } from 'primeng/multiselect';
-import { CadUserRoutingModule } from '../caduser/cad-user-routing.module';
+import { CadUserRoutingModule } from 'src/app/demo/components/uikit/caduser/cad-user-routing.module';
 import { TableModule } from 'primeng/table';
 
 

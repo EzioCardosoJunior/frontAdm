@@ -11,11 +11,11 @@ export class CadUserService {
 
   constructor(private http: HttpClient) { }
 
-  get(endpoint: string) {
+  get(data: any) {
     return this.http.get(`${this.apiUrl}/register`);
   }
 
-  post(endpoint: string, data: any) {
-    return this.http.post(`${this.apiUrl}/${endpoint}`, data);
+  post(data: any) {
+    return this.http.post(`${this.apiUrl}/users`, data);
   }
 }

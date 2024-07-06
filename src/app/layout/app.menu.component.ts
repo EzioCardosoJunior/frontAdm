@@ -29,15 +29,15 @@ export class AppMenuComponent implements OnInit {
                             {
                                 label: 'Grupo de Produtos', icon: 'pi pi-fw pi-bookmark',
                                 items: [
-                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/prodgroupcad'] },
-                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/app-prod-group-cad'] },
+                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/app-prod-group-list'] },
                                 ]
                             },
                             {
                                 label: 'Subgrupo de Produtos', icon: 'pi pi-fw pi-bookmark',
                                 items: [
-                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'buscar', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/prodsubgroupcad'] },
+                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/prodsubgrouplist'] },
                                 ]
                             },
                         ]

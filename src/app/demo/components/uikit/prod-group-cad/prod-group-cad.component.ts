@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { CadUserService } from 'src/app/demo/adonisServices/cad-user.service';
+import { CadProdService } from 'src/app/demo/adonisServices/cad-prod.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { CadUserService } from 'src/app/demo/adonisServices/cad-user.service';
 export class ProdGroupCadComponent {
   catForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private api: CadUserService) {  
+  constructor(private fb: FormBuilder, private api: CadProdService) {  
     this.catForm = this.fb.group({
       name: ['', Validators.required],
     });
@@ -24,10 +24,10 @@ export class ProdGroupCadComponent {
       const userData = this.catForm.value;
       console.log(this.catForm.value);   
 
-      this.api.post('product-groups', userData).subscribe(response => {
-        console.log('User registered successfully', response);        
+      this.api.post(userData).subscribe(response => {
+        console.log('Produto cadastrado com sucesso', response);        
       }, error => {
-        console.error('Error registering user', error);
+        console.error('Error registering', error);
       });
       
       

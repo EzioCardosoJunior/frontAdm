@@ -11,11 +11,11 @@ export class CadProdService {
 
   constructor(private http: HttpClient) { }
 
-  get(endpoint: string) {
+  get() {
     return this.http.get(`${this.apiUrl}/product-groups`);
   }
 
-  post(endpoint: string, data: any) {
-    return this.http.post(`${this.apiUrl}/${endpoint}`, data);
+  post(data: any) {
+    return this.http.post(`${this.apiUrl}/${'product-groups'}`, data);
   }
 }

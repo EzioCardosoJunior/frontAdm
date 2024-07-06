@@ -27,7 +27,7 @@ export class CadUserComponent {
       const userData = this.userForm.value;
       console.log(this.userForm.value);   
 
-      this.api.post('register', userData).subscribe(response => {
+      this.api.post(userData).subscribe(response => {
         console.log('User registered successfully', response);        
       }, error => {
         console.error('Error registering user', error);
