@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class CadProdService {
+export class ProdService {
 
   private apiUrl = environment.apiUrl;
 
@@ -15,7 +15,16 @@ export class CadProdService {
     return this.http.get(`${this.apiUrl}/product-groups`);
   }
 
+  subGroupGet() {
+    return this.http.get(`${this.apiUrl}/product-subgroups`);
+  }
+
   post(data: any) {
     return this.http.post(`${this.apiUrl}/${'product-groups'}`, data);
+  }
+
+  subGroupPost(data: any) {
+    console.log(data)
+    return this.http.post(`${this.apiUrl}/${'product-subgroups'}`, data);
   }
 }

@@ -18,8 +18,13 @@ import { authGuard } from '../../adonisServices/auth.guard';
         { path: 'overlay', data: { breadcrumb: 'Overlay' }, loadChildren: () => import('./overlays/overlaysdemo.module').then(m => m.OverlaysDemoModule) },
         { path: 'panel', data: { breadcrumb: 'Panel' }, loadChildren: () => import('./panels/panelsdemo.module').then(m => m.PanelsDemoModule) },
         { path: 'table', data: { breadcrumb: 'Table' }, loadChildren: () => import('./table/tabledemo.module').then(m => m.TableDemoModule) },
+
         { path: 'app-prod-group-cad', data: { breadcrumb: 'Cadastro Grupo Produtos' }, loadChildren: () => import('./prod-group-cad/prod-group-cad.module').then(m => m.ProdGroupCadModule) },
         { path: 'app-prod-group-list', data: { breadcrumb: 'Busca Grupo Produtos' }, loadChildren: () => import('./prod-group-list/prod-group-list.module').then(m => m.ProdGroupListModule) },
+        
+        { path: 'app-prod-sub-group-cad', data: { breadcrumb: 'Cadastro SubGrupo Produtos' }, loadChildren: () => import('./prod-sub-group-cad/prod-sub-group-cad.module').then(m => m.ProdSubGroupCadModule) },
+        { path: 'app-prod-sub-group-list', data: { breadcrumb: 'Busca SubGrupo Produtos' }, loadChildren: () => import('./prod-sub-group-list/prod-sub-group-list.module').then(m => m.ProdSubGroupListModule) },
+        
         { path: 'tree', data: { breadcrumb: 'Tree' }, loadChildren: () => import('./tree/treedemo.module').then(m => m.TreeDemoModule) },
         { path: 'menu', data: { breadcrumb: 'Menu' }, loadChildren: () => import('./menus/menus.module').then(m => m.MenusModule) },
         { path: 'cadastro', data: { breadcrumb: 'cadastro' }, loadChildren: () => import('./caduser/cad-user.module').then(m => m.CadUserModule), canActivate: [authGuard]  },

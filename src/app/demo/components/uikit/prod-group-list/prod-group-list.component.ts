@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CadProdService } from 'src/app/demo/adonisServices/cad-prod.service';
+import { ProdService } from 'src/app/demo/adonisServices/prod.service';
 
 import { SortEvent } from 'primeng/api';
 import { Table } from 'primeng/table';
@@ -14,7 +14,7 @@ import { Table } from 'primeng/table';
 export class ProdGroupListComponent {
 
   produtos: any;
-  constructor(private api: CadProdService) { }
+  constructor(private api: ProdService) { }
 
 
   ngOnInit() {

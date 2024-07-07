@@ -1,1 +1,18 @@
-<p>prod-sub-group-cad works!</p>
+<form [formGroup]="subCadForm" (ngSubmit)="onSubmit()">
+<div class="col-12">
+    <div class="card">
+        <h5>Cadastro</h5>
+        <div class="p-fluid p-formgrid grid">          
+            <div class="field col-12 md:col-3">
+                <label htmlFor="groupCode">Grupo</label>
+                <p-dropdown [options]="produtos" optionLabel="name" optionValue="id" formControlName="group_id"></p-dropdown>
+            </div>
+            <div class="field col-12 md:col-3">
+                <label htmlFor="name">Sub-Grupo</label>
+                <input pInputText id="name" type="name" formControlName="name" />
+            </div>
+        </div>
+        <button pButton type="submit" [disabled]="subCadForm.invalid">Submit</button>
+    </div>
+</div>
+</form>

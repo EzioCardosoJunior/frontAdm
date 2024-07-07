@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { CadProdService } from 'src/app/demo/adonisServices/cad-prod.service';
+import { ProdService } from 'src/app/demo/adonisServices/prod.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { CadProdService } from 'src/app/demo/adonisServices/cad-prod.service';
 export class ProdGroupCadComponent {
   catForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private api: CadProdService) {  
+  constructor(private fb: FormBuilder, private api: ProdService) {  
     this.catForm = this.fb.group({
       name: ['', Validators.required],
     });

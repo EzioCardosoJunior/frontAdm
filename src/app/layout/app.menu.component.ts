@@ -36,8 +36,8 @@ export class AppMenuComponent implements OnInit {
                             {
                                 label: 'Subgrupo de Produtos', icon: 'pi pi-fw pi-bookmark',
                                 items: [
-                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/prodsubgroupcad'] },
-                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/prodsubgrouplist'] },
+                                    { label: 'Cadastrar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/app-prod-sub-group-cad'] },
+                                    { label: 'Buscar', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/app-prod-sub-group-list'] },
                                 ]
                             },
                         ]
